@@ -1,0 +1,107 @@
+#root {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.App {
+    width: 800px;
+    margin: 20px auto;
+}
+
+.post {
+    display: flex;
+    padding: 15px;
+    border: 2px solid teal;
+    margin-top: 15px;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.post__btns {
+    display: flex;
+    flex-direction: column;
+}
+
+// Анимации из Transition-Group
+.item-enter {// Это начало css
+    transform: translateX(-350px); 
+}
+.item-enter-active {// Начала начинается активироется 
+    transform: translateX(0px);
+    transition: all 700ms ease-in;
+}
+.item-exit {// Начало конца
+    opacity: 1;
+}
+.item-exit-active {// Начало активации конца
+    transform: translateX(350px);
+    transition: all 700ms ease-in;
+}
+
+.alert-enter {
+    opacity: 0;
+    // transform: scale(0.9);
+}
+.alert-enter-active {
+    opacity: 1;
+    transform: translateX(0);
+    transition: all 500ms ease-in, transform 500ms;
+}
+.alert-exit {
+    opacity: 1;
+}
+.alert-exit-active {
+    opacity: 0;
+    // transform: scale(0.9);
+    transition: all 500ms ease-in, transform 500ms;
+}
+
+.page__wrapper {
+    margin-top: 30px;
+    margin-bottom: 50px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+  
+.page {
+    padding: 10px;
+    border: 1px solid teal;
+    cursor: pointer;
+}
+  
+.page__current {
+    border: 2px solid orange;
+    font-weight: bold;
+}
+
+.navbar {
+    height: 50px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    padding: 10px 15px;
+    background: lightgray;
+}
+  
+.navbar__links {
+    margin-left: auto;
+}
+
+.post__comment {
+    width: 50vw;
+    margin: 0 auto;
+    h1, h5 {
+      text-align: center;
+      // margin-top: 20px;
+    }
+    div {
+      margin: 10px 0;
+    }
+    a {
+      display: flex;
+      justify-content: center;
+      text-decoration: none;
+    }
+  }
