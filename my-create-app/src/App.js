@@ -4,7 +4,7 @@ import { AuthContext } from "./context/context";
 
 function App() {
   
-  const [isAuth, setAuth] = useState(false)
+  const [isAuth, setAuth] = useState(true)
   const [isLoading, setLoading] = useState(true)
 
   useEffect(() => {
